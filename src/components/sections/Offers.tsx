@@ -4,7 +4,7 @@ import Card from '../ui/Card';
 
 const Offers: React.FC = () => {
   return (
-    <section id="offers" className="relative py-20 bg-primary-200">
+    <section id="offers" className="relative py-20" style={{backgroundColor: '#efebe5'}}>
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">

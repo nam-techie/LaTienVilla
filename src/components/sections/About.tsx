@@ -55,7 +55,7 @@ const About: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="relative py-20 bg-primary-100">
+    <section id="about" className="relative py-20" style={{backgroundColor: '#f4f1ed'}}>
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -70,8 +70,8 @@ const About: React.FC = () => {
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="w-6 h-6 text-green-500" />
                   <div>
-                    <p className="font-semibold text-primary-800 text-sm">Đã khởi công</p>
-                    <p className="text-xs text-primary-600">Tiến độ đúng cam kết</p>
+                    <p className="font-semibold text-sm" style={{color: '#623e2a'}}>Đã khởi công</p>
+                    <p className="text-xs" style={{color: 'rgba(98, 62, 42, 0.8)'}}>Tiến độ đúng cam kết</p>
                   </div>
                 </div>
               </div>
@@ -80,14 +80,14 @@ const About: React.FC = () => {
             {/* Content */}
             <div className="space-y-8">
               <div>
-                <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-primary-800 mb-6 leading-tight">
+                <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight" style={{color: '#623e2a'}}>
                   Ngôi nhà biết thở
                 </h2>
-                <p className="font-sans text-lg text-primary-800 leading-relaxed mb-6">
-                  Biệt Thự Biển Nghỉ Dưỡng La Tiên Villa Nha Trang – giai đoạn 2 thuộc quần thể đô thị Quốc tế 44ha Libera Nha Trang.
+                <p className="font-sans text-lg leading-relaxed mb-6" style={{color: '#623e2a'}}>
+                  Biệt Thư Biển Nghỉ Dưỡng La Tiên Villa Nha Trang – giai đoạn 2 thuộc quần thể đô thị Quốc tế 44ha Libera Nha Trang.
                   Nổi bật với vị trí "tựa sơn hướng hải": lưng tựa dòng núi Cô Tiên xanh mát, mặt hướng ra vịnh Nha Trang ngọc ngà trời rộng.
                 </p>
-                <p className="font-sans text-lg text-primary-800 leading-relaxed mb-8">
+                <p className="font-sans text-lg leading-relaxed mb-8" style={{color: '#623e2a'}}>
                   Mỗi căn biệt thự đơn lập hoặc song lập được thiết kế chuẩn nghỉ dưỡng, bàn giao full nội thất cao cấp,
                   mang đến trải nghiệm sống tinh tế giữa thiên nhiên và tiện nghi hiện đại.
                 </p>

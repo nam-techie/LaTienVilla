@@ -44,7 +44,7 @@ const Contact: React.FC = () => {
   const formProgress = getFormProgress();
 
   return (
-    <section id="contact" className="relative py-20 overflow-hidden">
+    <section id="contact" className="relative py-20 overflow-hidden" style={{backgroundColor: '#f4f1ed'}}>
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img
@@ -69,7 +69,7 @@ const Contact: React.FC = () => {
           <div className="flex justify-center">
             {/* Contact Form - Centered */}
             <div className="w-full max-w-lg">
-              <Card className="p-8 shadow-2xl bg-gradient-to-br from-white/95 via-orange-50/90 to-yellow-50/85 border-0 rounded-3xl backdrop-blur-lg border border-white/20">
+              <div className="p-8 shadow-2xl border-0 rounded-3xl backdrop-blur-lg border border-white/20" style={{background: 'linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(244,241,237,0.9) 50%, rgba(239,235,229,0.85) 100%)'}}>
                 <>
                   {/* Success State */}
                   {isSuccess && (
@@ -217,7 +217,7 @@ const Contact: React.FC = () => {
                 </form>
                 )}
               </>
-              </Card>
+              </div>
             </div>
           </div>
         </div>

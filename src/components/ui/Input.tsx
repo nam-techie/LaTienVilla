@@ -69,9 +69,9 @@ const Input: React.FC<InputProps> = ({
           placeholder={isFocused ? placeholder : ''}
           className={cn(
             // Base styles
-            'w-full h-16 px-4 pt-6 pb-2 bg-white/90 backdrop-blur-sm border-2 rounded-2xl transition-all duration-300 text-primary-800 font-medium',
+            'w-full h-16 px-4 pt-6 pb-2 bg-white/90 backdrop-blur-sm border-2 rounded-2xl transition-all duration-300 font-medium' + ' ' + 'text-amber-900',
             // Focus styles
-            'focus:outline-none focus:bg-white focus:border-orange-400 focus:ring-4 focus:ring-orange-400/20',
+            'focus:outline-none focus:bg-white focus:ring-4' + ' ' + 'focus:border-amber-600 focus:ring-amber-600/20',
             // Error styles
             error ? 'border-red-400 bg-red-50/90' : 'border-white/50 hover:border-white/70',
             // Icon padding
