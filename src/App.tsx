@@ -11,12 +11,15 @@ import Location from './components/sections/Location';
 import Features from './components/sections/Features';
 import FamilySuite from './components/sections/FamilySuite';
 import MasterPlan from './components/sections/MasterPlan';
+import Progress from './components/sections/Progress';
+import Interior from './components/sections/Interior';
 import Offers from './components/sections/Offers';
 import Contact from './components/sections/Contact';
 
 // Common Components
 import ParallaxBackground from './components/common/ParallaxBackground';
 import VideoModal from './components/common/VideoModal';
+import StickyContact from './components/common/StickyContact';
 
 function App() {
   const [showVideoModal, setShowVideoModal] = useState(false);
@@ -49,6 +52,12 @@ function App() {
         {/* Master Plan Section */}
         <MasterPlan />
 
+        {/* Progress Section */}
+        <Progress />
+
+        {/* Interior Section */}
+        <Interior />
+
         {/* Offers Section */}
         <Offers />
 
@@ -59,10 +68,13 @@ function App() {
         <Footer />
       </div>
 
+      {/* Sticky Contact Buttons */}
+      <StickyContact />
+
       {/* Video Modal */}
-      <VideoModal 
-        isOpen={showVideoModal} 
-        onClose={() => setShowVideoModal(false)} 
+      <VideoModal
+        isOpen={showVideoModal}
+        onClose={() => setShowVideoModal(false)}
       />
     </div>
   );

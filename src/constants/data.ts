@@ -8,11 +8,14 @@ import type { Offer, NavItem, LocationPoint, NearbyAttraction, Amenity, ProjectI
 
 // Navigation items
 export const navItems: NavItem[] = [
-  { label: 'Giới thiệu', section: 'about' },
+  { label: 'Tổng quan', section: 'about' },
   { label: 'Vị trí', section: 'location' },
   { label: 'Tiện ích', section: 'features' },
   { label: 'Mặt bằng', section: 'masterplan' },
-  { label: 'Ưu đãi', section: 'offers' }
+  { label: 'Tiến độ', section: 'progress' },
+  { label: 'Nội thất', section: 'interior' },
+  { label: 'Ưu đãi', section: 'offers' },
+  { label: 'Liên hệ', section: 'contact' }
 ];
 
 // Special offers data
