@@ -1,12 +1,13 @@
 import React from 'react';
-import { Facebook, Instagram, Youtube } from 'lucide-react';
+import { Facebook, Youtube, CheckCircle } from 'lucide-react';
 import { useScrollToSection } from '../../hooks/useScrollEffect';
+import TikTokIcon from '../icons/TikTokIcon';
 
 const Footer: React.FC = () => {
   const scrollToSection = useScrollToSection();
 
   return (
-    <footer style={{backgroundColor: '#623e2a'}} className="text-white">
+    <footer style={{ backgroundColor: '#623e2a' }} className="text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-2 gap-8">
           {/* Left Column - Logo & Social */}
@@ -32,14 +33,37 @@ const Footer: React.FC = () => {
 
               {/* Social Icons */}
               <div className="flex space-x-3">
-                <a href="#" className="text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10">
+                <a
+                  href="https://www.facebook.com/search/top?q=ctcp%20nh%C3%A0%20ann%20home"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10"
+                >
                   <Facebook className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10">
-                  <Instagram className="w-5 h-5" />
+                <a
+                  href="https://www.annhome.vn/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10"
+                >
+                  <CheckCircle className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10">
+                <a
+                  href="https://www.youtube.com/@annhome"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10"
+                >
                   <Youtube className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://www.tiktok.com/@annhome.official"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10"
+                >
+                  <TikTokIcon />
                 </a>
               </div>
             </div>
@@ -81,19 +105,28 @@ const Footer: React.FC = () => {
               </p>
               <div className="flex space-x-6">
                 <button
-                  onClick={() => scrollToSection('about')}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection('about');
+                  }}
                   className="font-sans text-sm text-white/70 hover:text-white transition-colors"
                 >
                   Giới thiệu
                 </button>
                 <button
-                  onClick={() => scrollToSection('features')}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection('features');
+                  }}
                   className="font-sans text-sm text-white/70 hover:text-white transition-colors"
                 >
                   Tiện ích
                 </button>
                 <button
-                  onClick={() => scrollToSection('contact')}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection('contact');
+                  }}
                   className="font-sans text-sm text-white/70 hover:text-white transition-colors"
                 >
                   Liên hệ
