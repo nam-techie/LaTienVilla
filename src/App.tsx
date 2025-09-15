@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 
-// Section Components
 import Hero from './components/sections/Hero';
 import About from './components/sections/About';
 import Location from './components/sections/Location';
@@ -16,8 +15,8 @@ import Interior from './components/sections/Interior';
 import Offers from './components/sections/Offers';
 import Contact from './components/sections/Contact';
 import Amenities from './components/sections/Amenities';
+import LayoutVilla from './components/sections/LayoutVilla';
 
-// Common Components
 import ParallaxBackground from './components/common/ParallaxBackground';
 import VideoModal from './components/common/VideoModal';
 import StickyContact from './components/common/StickyContact';
@@ -45,16 +44,20 @@ function App() {
         <Location />
 
         {/* Features Section - Accommodations */}
-        <Features />
+        {/* <Features /> */}
 
         {/* Amenities Section */}
         <Amenities />
+
+
 
         {/* Family Suite Section */}
         <FamilySuite />
 
         {/* Master Plan Section */}
         <MasterPlan />
+        {/* Layout Villa Section */}
+        <LayoutVilla />
 
         {/* Progress Section */}
         <Progress />

@@ -2,6 +2,7 @@ import React from 'react';
 import { Building2, Home, Award, Star, CheckCircle } from 'lucide-react';
 import Card from '../ui/Card';
 import aboutImage from '../../assets/pictures/output-018.jpg';
+import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 const About: React.FC = () => {
   const projectStats = [
@@ -54,13 +55,21 @@ const About: React.FC = () => {
     }
   ];
 
+  const { elementRef: imageRef, isVisible: imageVisible } = useScrollAnimation();
+  const { elementRef: contentRef, isVisible: contentVisible } = useScrollAnimation();
+  const { elementRef: statsRef, isVisible: statsVisible } = useScrollAnimation();
+
   return (
-    <section id="about" className="relative py-20" style={{backgroundColor: '#f4f1ed'}}>
+    <section id="about" className="relative py-20" style={{ backgroundColor: '#f4f1ed' }}>
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Image */}
-            <div className="relative">
+            <div
+              ref={imageRef}
+              className={`relative transition-all duration-700 ease-in-out ${imageVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+            >
               <img
                 src={aboutImage}
                 alt="La Tiên Villa - Phối cảnh tổng thể"
@@ -70,24 +79,28 @@ const About: React.FC = () => {
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="w-6 h-6 text-green-500" />
                   <div>
-                    <p className="font-semibold text-sm" style={{color: '#623e2a'}}>Đã khởi công</p>
-                    <p className="text-xs" style={{color: 'rgba(98, 62, 42, 0.8)'}}>Tiến độ đúng cam kết</p>
+                    <p className="font-semibold text-sm" style={{ color: '#623e2a' }}>Đã khởi công</p>
+                    <p className="text-xs" style={{ color: 'rgba(98, 62, 42, 0.8)' }}>Tiến độ đúng cam kết</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Content */}
-            <div className="space-y-8">
+            <div
+              ref={contentRef}
+              className={`space-y-8 transition-all duration-700 ease-in-out ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+            >
               <div>
-                <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight" style={{color: '#623e2a'}}>
+                <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight" style={{ color: '#623e2a' }}>
                   Ngôi nhà biết thở
                 </h2>
-                <p className="font-sans text-lg leading-relaxed mb-6" style={{color: '#623e2a'}}>
+                <p className="font-sans text-lg leading-relaxed mb-6" style={{ color: '#623e2a' }}>
                   Biệt Thư Biển Nghỉ Dưỡng La Tiên Villa Nha Trang – giai đoạn 2 thuộc quần thể đô thị Quốc tế 44ha Libera Nha Trang.
                   Nổi bật với vị trí "tựa sơn hướng hải": lưng tựa dòng núi Cô Tiên xanh mát, mặt hướng ra vịnh Nha Trang ngọc ngà trời rộng.
                 </p>
-                <p className="font-sans text-lg leading-relaxed mb-8" style={{color: '#623e2a'}}>
+                <p className="font-sans text-lg leading-relaxed mb-8" style={{ color: '#623e2a' }}>
                   Mỗi căn biệt thự đơn lập hoặc song lập được thiết kế chuẩn nghỉ dưỡng, bàn giao full nội thất cao cấp,
                   mang đến trải nghiệm sống tinh tế giữa thiên nhiên và tiện nghi hiện đại.
                 </p>
@@ -109,11 +122,16 @@ const About: React.FC = () => {
           </div>
 
           {/* Project Stats */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+          <div
+            ref={statsRef}
+            className={`grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 transition-all duration-700 ease-in-out ${statsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
+          >
             {projectStats.map((stat, index) => (
-              <Card
+              <div
                 key={index}
                 className="bg-white p-6 text-center border border-primary-200 hover:shadow-lg transition-all duration-300"
+                style={{ transitionDelay: `${index * 0.1}s` }}
               >
                 <div className="text-primary-600 mb-3 flex justify-center">
                   {stat.icon}
@@ -121,7 +139,7 @@ const About: React.FC = () => {
                 <h3 className="text-lg font-bold text-primary-800 mb-2">{stat.title}</h3>
                 <p className="text-sm text-primary-700 mb-2 font-semibold">{stat.value}</p>
                 <p className="text-xs text-primary-600">{stat.description}</p>
-              </Card>
+              </div>
             ))}
           </div>
         </div>
