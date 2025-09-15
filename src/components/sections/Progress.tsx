@@ -12,42 +12,50 @@ interface ProgressItem {
 
 const progressItems: ProgressItem[] = [
   {
-    phase: "Giai đoạn 1",
-    title: "Khởi công xây dựng",
-    description: "Hoàn thành san lấp mặt bằng, hạ tầng kỹ thuật",
-    date: "Q2/2024",
-    status: "completed",
-    icon: Building2
-  },
-  {
-    phase: "Giai đoạn 2", 
-    title: "Xây dựng cơ sở hạ tầng",
-    description: "Hoàn thiện đường nội bộ, hệ thống điện nước",
-    date: "Q4/2024",
-    status: "current",
-    icon: Truck
-  },
-  {
-    phase: "Giai đoạn 3",
-    title: "Xây dựng villa",
-    description: "Thi công hoàn thiện các căn villa mẫu",
-    date: "Q2/2025",
+    phase: "Khởi công",
+    title: "San lấp mặt bằng",
+    description: "San nền, khởi công hạ tầng kỹ thuật",
+    date: "16/09/2025",
     status: "upcoming",
     icon: Building2
   },
   {
-    phase: "Giai đoạn 4",
-    title: "Hoàn thiện nội thất",
-    description: "Lắp đặt nội thất cao cấp, tiện ích cộng đồng",
-    date: "Q3/2025",
+    phase: "Hạ tầng",
+    title: "Thi công hạ tầng",
+    description: "San nền (16/09 - 30/11/2025), Giao thông (28/09 - 20/12/2025)",
+    date: "28/09/2025 - 20/12/2025",
+    status: "upcoming",
+    icon: Truck
+  },
+  {
+    phase: "Móng",
+    title: "Thi công móng",
+    description: "Thi công móng Biệt thự",
+    date: "21/10/2025 - 06/03/2026",
+    status: "upcoming",
+    icon: Building2
+  },
+  {
+    phase: "Xây thô",
+    title: "Thi công thân",
+    description: "Thi công tầng 1 và đổ mái biệt thự",
+    date: "06/03/2026 - 04/07/2026",
+    status: "upcoming",
+    icon: Building2
+  },
+  {
+    phase: "Hoàn thiện",
+    title: "Kiến trúc & Cảnh quan",
+    description: "Hoàn thiện kiến trúc và cảnh quan đồng bộ",
+    date: "04/07/2026 - 06/03/2027",
     status: "upcoming",
     icon: CheckCircle
   },
   {
-    phase: "Giai đoạn 5",
-    title: "Bàn giao",
-    description: "Bàn giao villa hoàn thiện cho khách hàng",
-    date: "Q4/2025",
+    phase: "Bàn giao",
+    title: "Hoàn thiện & Bàn giao",
+    description: "Lắp đặt thiết bị, nội thất và bàn giao cho khách hàng",
+    date: "06/03/2027 - 03/11/2027",
     status: "upcoming",
     icon: Key
   }
@@ -74,7 +82,7 @@ const Progress: React.FC = () => {
             Tiến Độ Xây Dựng
           </h2>
           <p className="text-lg text-[#623e2a]/70 max-w-3xl mx-auto leading-relaxed">
-            Theo dõi tiến độ xây dựng La Tiên Villa với lộ trình rõ ràng, 
+            Theo dõi tiến độ xây dựng La Tiên Villa với lộ trình rõ ràng,
             đảm bảo bàn giao đúng hẹn với chất lượng hoàn hảo.
           </p>
         </div>
@@ -84,53 +92,47 @@ const Progress: React.FC = () => {
           <div className="relative">
             {/* Timeline Line */}
             <div className="absolute left-8 md:left-1/2 md:transform md:-translate-x-0.5 top-0 bottom-0 w-0.5 bg-[#623e2a]/20"></div>
-            
+
             {/* Progress Items */}
             <div className="space-y-12">
               {progressItems.map((item, index) => {
                 const Icon = item.icon;
                 const isEven = index % 2 === 0;
-                
+
                 return (
-                  <div key={index} className={`relative flex items-center ${
-                    isEven ? 'md:flex-row' : 'md:flex-row-reverse'
-                  } flex-row`}>
+                  <div key={index} className={`relative flex items-center ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'
+                    } flex-row`}>
                     {/* Timeline Dot */}
                     <div className="absolute left-8 md:left-1/2 md:transform md:-translate-x-1/2 z-10">
-                      <div className={`w-4 h-4 rounded-full border-4 ${
-                        item.status === 'completed' 
-                          ? 'bg-green-500 border-green-200' 
-                          : item.status === 'current'
+                      <div className={`w-4 h-4 rounded-full border-4 ${item.status === 'completed'
+                        ? 'bg-green-500 border-green-200'
+                        : item.status === 'current'
                           ? 'bg-[#623e2a] border-[#623e2a]/30 animate-pulse'
                           : 'bg-gray-300 border-gray-200'
-                      }`}></div>
+                        }`}></div>
                     </div>
 
                     {/* Content Card */}
-                    <div className={`w-full md:w-5/12 ml-20 md:ml-0 ${
-                      isEven ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'
-                    }`}>
-                      <div className={`bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-[#623e2a]/10 transition-all duration-300 hover:shadow-xl hover:scale-105 ${
-                        item.status === 'current' ? 'ring-2 ring-[#623e2a]/20' : ''
+                    <div className={`w-full md:w-5/12 ml-20 md:ml-0 ${isEven ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'
                       }`}>
+                      <div className={`bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-[#623e2a]/10 transition-all duration-300 hover:shadow-xl hover:scale-105 ${item.status === 'current' ? 'ring-2 ring-[#623e2a]/20' : ''
+                        }`}>
                         {/* Status Badge */}
                         <div className="flex items-center justify-between mb-4">
-                          <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                            item.status === 'completed'
-                              ? 'bg-green-100 text-green-700'
-                              : item.status === 'current'
+                          <span className={`px-3 py-1 rounded-full text-xs font-medium ${item.status === 'completed'
+                            ? 'bg-green-100 text-green-700'
+                            : item.status === 'current'
                               ? 'bg-[#623e2a]/10 text-[#623e2a]'
                               : 'bg-gray-100 text-gray-600'
-                          }`}>
+                            }`}>
                             {item.phase}
                           </span>
-                          <div className={`p-2 rounded-lg ${
-                            item.status === 'completed'
-                              ? 'bg-green-100 text-green-600'
-                              : item.status === 'current'
+                          <div className={`p-2 rounded-lg ${item.status === 'completed'
+                            ? 'bg-green-100 text-green-600'
+                            : item.status === 'current'
                               ? 'bg-[#623e2a]/10 text-[#623e2a]'
                               : 'bg-gray-100 text-gray-500'
-                          }`}>
+                            }`}>
                             <Icon className="w-5 h-5" />
                           </div>
                         </div>
@@ -142,7 +144,7 @@ const Progress: React.FC = () => {
                         <p className="text-[#623e2a]/70 mb-4 leading-relaxed">
                           {item.description}
                         </p>
-                        
+
                         {/* Date */}
                         <div className="flex items-center space-x-2 text-[#623e2a]/60">
                           <Calendar className="w-4 h-4" />
@@ -170,7 +172,7 @@ const Progress: React.FC = () => {
                 <div className="text-[#623e2a]/70">Tiến độ xây dựng</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">Q4/2025</div>
+                <div className="text-3xl font-bold text-blue-600 mb-2">03/11/2027</div>
                 <div className="text-[#623e2a]/70">Dự kiến bàn giao</div>
               </div>
             </div>

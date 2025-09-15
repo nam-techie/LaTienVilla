@@ -15,6 +15,7 @@ import Progress from './components/sections/Progress';
 import Interior from './components/sections/Interior';
 import Offers from './components/sections/Offers';
 import Contact from './components/sections/Contact';
+import Amenities from './components/sections/Amenities';
 
 // Common Components
 import ParallaxBackground from './components/common/ParallaxBackground';
@@ -28,7 +29,7 @@ function App() {
     <div className="min-h-screen relative">
       {/* Full Page Parallax Background */}
       <ParallaxBackground />
-      
+
       {/* Main Content Container */}
       <div className="relative z-10">
         {/* Header */}
@@ -45,6 +46,9 @@ function App() {
 
         {/* Features Section - Accommodations */}
         <Features />
+
+        {/* Amenities Section */}
+        <Amenities />
 
         {/* Family Suite Section */}
         <FamilySuite />
