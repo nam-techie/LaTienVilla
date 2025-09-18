@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 // Layout Components
 import Header from './components/layout/Header';
@@ -7,7 +7,6 @@ import Footer from './components/layout/Footer';
 import Hero from './components/sections/Hero';
 import About from './components/sections/About';
 import Location from './components/sections/Location';
-import Features from './components/sections/Features';
 import FamilySuite from './components/sections/FamilySuite';
 import MasterPlan from './components/sections/MasterPlan';
 import Progress from './components/sections/Progress';
