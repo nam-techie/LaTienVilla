@@ -70,8 +70,8 @@ const MasterPlan: React.FC = () => {
             <div className="space-y-4 text-lg md:text-xl font-light leading-relaxed opacity-90">
               <p>Thiết kế "Lost in Nature",
                 Nằm lặng cây xanh ôm trọn hiên nhà,
-                Gần 14.000m² mặt nước len lỏi khắp không gian,</p>
-              <p>Ba bãi tắm riêng tư, trải rộng giữa vịnh trời.</p>
+                Gần 14.000m² mặt nước len lỏi khắp không gian,
+                Ba bãi tắm riêng tư, trải rộng giữa vịnh trời.</p>
             </div>
 
             {/* Overall Master Plan Image */}

@@ -1,10 +1,418 @@
-/* Remove all existing Swiper styles */
+/* La Tiên Villa - Global Styles */
+/* Organized with Design System Integration */
 
-/* Custom Animations */
-@keyframes fadeInUp {
+/* =================================================================
+   1. CSS RESET & BASE STYLES
+   ================================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--color-gray-900);
+    background-color: var(--color-gray-50);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* =================================================================
+   2. TYPOGRAPHY SYSTEM
+   ================================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--color-gray-900);
+}
+
+h1 {
+    font-size: var(--font-size-5xl);
+}
+
+h2 {
+    font-size: var(--font-size-4xl);
+}
+
+h3 {
+    font-size: var(--font-size-3xl);
+}
+
+h4 {
+    font-size: var(--font-size-2xl);
+}
+
+h5 {
+    font-size: var(--font-size-xl);
+}
+
+h6 {
+    font-size: var(--font-size-lg);
+}
+
+p {
+    margin-bottom: 1rem;
+    color: var(--color-gray-700);
+}
+
+a {
+    color: var(--color-primary-500);
+    text-decoration: none;
+    transition: color var(--duration-normal) var(--easing-smooth);
+}
+
+a:hover {
+    color: var(--color-primary-600);
+}
+
+/* =================================================================
+   3. LAYOUT SYSTEM
+   ================================================================= */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+.container-fluid {
+    width: 100%;
+    max-width: 100%;
+}
+
+.container-narrow {
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+.container-wide {
+    max-width: 1536px;
+    margin: 0 auto;
+}
+
+/* =================================================================
+   4. UTILITY CLASSES
+   ================================================================= */
+
+/* Spacing Utilities */
+.mt-0 {
+    margin-top: 0;
+}
+
+.mt-1 {
+    margin-top: var(--spacing-xs);
+}
+
+.mt-2 {
+    margin-top: var(--spacing-sm);
+}
+
+.mt-3 {
+    margin-top: var(--spacing-md);
+}
+
+.mt-4 {
+    margin-top: var(--spacing-lg);
+}
+
+.mt-5 {
+    margin-top: var(--spacing-xl);
+}
+
+.mt-6 {
+    margin-top: var(--spacing-2xl);
+}
+
+.mt-8 {
+    margin-top: var(--spacing-3xl);
+}
+
+.mt-12 {
+    margin-top: var(--spacing-4xl);
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mb-1 {
+    margin-bottom: var(--spacing-xs);
+}
+
+.mb-2 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.mb-3 {
+    margin-bottom: var(--spacing-md);
+}
+
+.mb-4 {
+    margin-bottom: var(--spacing-lg);
+}
+
+.mb-5 {
+    margin-bottom: var(--spacing-xl);
+}
+
+.mb-6 {
+    margin-bottom: var(--spacing-2xl);
+}
+
+.mb-8 {
+    margin-bottom: var(--spacing-3xl);
+}
+
+.mb-12 {
+    margin-bottom: var(--spacing-4xl);
+}
+
+/* Text Utilities */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-primary {
+    color: var(--color-primary-500);
+}
+
+.text-secondary {
+    color: var(--color-secondary-500);
+}
+
+.text-gray-500 {
+    color: var(--color-gray-500);
+}
+
+.text-gray-600 {
+    color: var(--color-gray-600);
+}
+
+.text-gray-700 {
+    color: var(--color-gray-700);
+}
+
+.text-gray-800 {
+    color: var(--color-gray-800);
+}
+
+.text-gray-900 {
+    color: var(--color-gray-900);
+}
+
+.text-xs {
+    font-size: var(--font-size-xs);
+}
+
+.text-sm {
+    font-size: var(--font-size-sm);
+}
+
+.text-base {
+    font-size: var(--font-size-base);
+}
+
+.text-lg {
+    font-size: var(--font-size-lg);
+}
+
+.text-xl {
+    font-size: var(--font-size-xl);
+}
+
+.text-2xl {
+    font-size: var(--font-size-2xl);
+}
+
+.text-3xl {
+    font-size: var(--font-size-3xl);
+}
+
+.text-4xl {
+    font-size: var(--font-size-4xl);
+}
+
+.text-5xl {
+    font-size: var(--font-size-5xl);
+}
+
+.text-6xl {
+    font-size: var(--font-size-6xl);
+}
+
+/* Display Utilities */
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.inline {
+    display: inline;
+}
+
+.flex {
+    display: flex;
+}
+
+.inline-flex {
+    display: inline-flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Flexbox Utilities */
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-nowrap {
+    flex-wrap: nowrap;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+.items-end {
+    align-items: flex-end;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+/* =================================================================
+   5. COMPONENT BASE STYLES
+   ================================================================= */
+
+/* Image Styles */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Form Elements */
+input,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* =================================================================
+   6. ANIMATION SYSTEM
+   ================================================================= */
+
+/* Keyframe Definitions - Additional animations not in design-system.css */
+@keyframes rotateIn {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: rotate(-200deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes flipInX {
+    from {
+        transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
     }
 
     to {
@@ -13,111 +421,26 @@
     }
 }
 
-@keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+/* Animation Classes */
+.animate-rotate-in {
+    animation: rotateIn 0.8s ease forwards;
 }
 
-@keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+.animate-flip-in-x {
+    animation: flipInX 0.7s ease forwards;
 }
 
-@keyframes bounceIn {
-    0% {
-        opacity: 0;
-        transform: scale(0.3);
-    }
-
-    50% {
-        opacity: 1;
-        transform: scale(1.05);
-    }
-
-    70% {
-        transform: scale(0.9);
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
+.animate-zoom-in {
+    animation: zoomIn 0.6s ease forwards;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+.animate-slide-in-down {
+    animation: slideInDown 0.7s ease forwards;
 }
 
-@keyframes slideInUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes scaleIn {
-    from {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-.animate-fade-in-up {
-    animation: fadeInUp 0.8s ease-out;
-}
-
-.animate-slide-in-left {
-    animation: slideInLeft 0.8s ease-out;
-}
-
-.animate-slide-in-right {
-    animation: slideInRight 0.8s ease-out;
-}
-
-.animate-bounce-in {
-    animation: bounceIn 1s ease-out;
-}
-
-.animate-fade-in {
-    animation: fadeIn 0.6s ease-out;
-}
-
-.animate-slide-in-up {
-    animation: slideInUp 0.8s ease-out;
-}
-
-.animate-scale-in {
-    animation: scaleIn 0.6s ease-out;
+/* Animation Delays */
+.animation-delay-100 {
+    animation-delay: 100ms;
 }
 
 .animation-delay-200 {
@@ -135,6 +458,22 @@
 .animation-delay-500 {
     animation-delay: 500ms;
 }
+
+.animation-delay-600 {
+    animation-delay: 600ms;
+}
+
+.animation-delay-700 {
+    animation-delay: 700ms;
+}
+
+.animation-delay-800 {
+    animation-delay: 800ms;
+}
+
+/* =================================================================
+   7. SCROLL ANIMATIONS
+   ================================================================= */
 
 /* Scroll Animation Classes */
 .scroll-animate {
@@ -211,68 +550,146 @@
     transition-delay: 0.6s;
 }
 
-/* Additional modern animations */
+/* =================================================================
+   8. RESPONSIVE UTILITIES
+   ================================================================= */
 
-@keyframes rotateIn {
-    from {
-        opacity: 0;
-        transform: rotate(-200deg);
+@media (max-width: 640px) {
+    .container {
+        padding: 0 var(--spacing-md);
     }
 
-    to {
-        opacity: 1;
-        transform: rotate(0deg);
-    }
-}
-
-.animate-rotate-in {
-    animation: rotateIn 0.8s ease forwards;
-}
-
-@keyframes flipInX {
-    from {
-        transform: perspective(400px) rotateX(90deg);
-        opacity: 0;
+    h1 {
+        font-size: var(--font-size-4xl);
     }
 
-    to {
-        transform: perspective(400px) rotateX(0deg);
-        opacity: 1;
+    h2 {
+        font-size: var(--font-size-3xl);
+    }
+
+    h3 {
+        font-size: var(--font-size-2xl);
     }
 }
 
-.animate-flip-in-x {
-    animation: flipInX 0.7s ease forwards;
-}
-
-@keyframes zoomIn {
-    from {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
+@media (max-width: 768px) {
+    .container {
+        padding: 0 var(--spacing-lg);
     }
 }
 
-.animate-zoom-in {
-    animation: zoomIn 0.6s ease forwards;
-}
-
-@keyframes slideInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 var(--spacing-xl);
     }
 }
 
-.animate-slide-in-down {
-    animation: slideInDown 0.7s ease forwards;
+/* =================================================================
+   9. PRINT STYLES
+   ================================================================= */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: black !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    .scroll-animate,
+    .scroll-animate-left,
+    .scroll-animate-right,
+    .scroll-animate-scale,
+    .scroll-animate-stagger {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .animate-fade-in-up,
+    .animate-slide-in-left,
+    .animate-slide-in-right,
+    .animate-bounce-in,
+    .animate-fade-in,
+    .animate-slide-in-up,
+    .animate-scale-in,
+    .animate-rotate-in,
+    .animate-flip-in-x,
+    .animate-zoom-in,
+    .animate-slide-in-down {
+        animation: none !important;
+    }
+}
+
+/* =================================================================
+   10. ACCESSIBILITY & MOTION PREFERENCES
+   ================================================================= */
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    a {
+        text-decoration: underline;
+    }
+
+    button {
+        border: 2px solid currentColor;
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .scroll-animate,
+    .scroll-animate-left,
+    .scroll-animate-right,
+    .scroll-animate-scale,
+    .scroll-animate-stagger {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* =================================================================
+   11. FOCUS STYLES
+   ================================================================= */
+
+:focus {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 2px;
+}
+
+/* =================================================================
+   12. SELECTION STYLES
+   ================================================================= */
+
+::selection {
+    background-color: var(--color-primary-200);
+    color: var(--color-primary-900);
+}
+
+::-moz-selection {
+    background-color: var(--color-primary-200);
+    color: var(--color-primary-900);
 }

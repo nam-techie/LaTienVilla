@@ -38,15 +38,15 @@ const LayoutVilla: React.FC = () => {
     const currentLayout = layouts.find((l) => l.id === selectedLayout);
 
     return (
-        <section className="container mx-auto px-4 py-12">
+        <section className="container mx-auto px-4 py-8 sm:py-12">
             {/* Tabs */}
-            <div className="flex justify-center space-x-4 mb-8 border-b border-gray-300">
+            <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-6 sm:mb-8 border-b border-gray-300 pb-4">
                 {layouts.map((layout) => (
                     <button
                         key={layout.id}
-                        className={`px-4 py-2 font-semibold uppercase tracking-wide transition-colors duration-300 ${selectedLayout === layout.id
-                            ? 'border-b-4 border-primary-800 text-primary-800'
-                            : 'text-gray-600 hover:text-primary-700'
+                        className={`px-3 sm:px-4 py-2 font-semibold uppercase tracking-wide transition-colors duration-300 text-sm sm:text-base whitespace-nowrap ${selectedLayout === layout.id
+                                ? 'border-b-4 border-primary-800 text-primary-800'
+                                : 'text-gray-600 hover:text-primary-700'
                             }`}
                         onClick={() => setSelectedLayout(layout.id)}
                     >

@@ -20,8 +20,14 @@ import ParallaxBackground from './components/common/ParallaxBackground';
 import VideoModal from './components/common/VideoModal';
 import StickyContact from './components/common/StickyContact';
 
+// Test Components
+import DesignSystemTest from './components/test/DesignSystemTest';
+
 function App() {
   const [showVideoModal, setShowVideoModal] = useState(false);
+
+  // Show design system test if URL contains ?test=design
+  const isDesignTest = window.location.search.includes('test=design');
 
   return (
     <div className="min-h-screen relative">
@@ -29,53 +35,52 @@ function App() {
       <ParallaxBackground />
 
       {/* Main Content Container */}
-      <div className="relative z-10">
+      <div className="relative z-10 min-h-screen">
         {/* Header */}
         <Header />
 
+        {/* Design System Test */}
+        {isDesignTest && <DesignSystemTest />}
+
         {/* Hero Section */}
-        <Hero onVideoModalOpen={() => setShowVideoModal(true)} />
+        {!isDesignTest && <Hero onVideoModalOpen={() => setShowVideoModal(true)} />}
 
         {/* About Section */}
-        <About />
+        {!isDesignTest && <About />}
 
         {/* Location Section */}
-        <Location />
-
-        {/* Features Section - Accommodations */}
-        {/* <Features /> */}
+        {!isDesignTest && <Location />}
 
         {/* Amenities Section */}
-        <Amenities />
-
-
+        {!isDesignTest && <Amenities />}
 
         {/* Family Suite Section */}
-        <FamilySuite />
+        {/* {!isDesignTest && <FamilySuite />} */}
 
         {/* Master Plan Section */}
-        <MasterPlan />
+        {!isDesignTest && <MasterPlan />}
+
         {/* Layout Villa Section */}
-        <LayoutVilla />
+        {!isDesignTest && <LayoutVilla />}
 
         {/* Progress Section */}
-        <Progress />
+        {!isDesignTest && <Progress />}
 
         {/* Interior Section */}
-        <Interior />
+        {!isDesignTest && <Interior />}
 
         {/* Offers Section */}
-        <Offers />
+        {!isDesignTest && <Offers />}
 
         {/* Contact Section */}
-        <Contact />
+        {!isDesignTest && <Contact />}
 
         {/* Footer */}
-        <Footer />
+        {!isDesignTest && <Footer />}
       </div>
 
       {/* Sticky Contact Buttons */}
-      <StickyContact />
+      {!isDesignTest && <StickyContact />}
 
       {/* Video Modal */}
       <VideoModal

@@ -17,14 +17,6 @@ const Progress: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
             Pháp lý/ Chính sách bán hàng
           </h2>
-          {/* Decorative wavy lines */}
-          <div className="flex justify-center space-x-2 mb-8">
-            <div className="w-16 h-1 bg-primary-500 rounded-full"></div>
-            <div className="w-20 h-1 bg-primary-400 rounded-full"></div>
-            <div className="w-16 h-1 bg-primary-500 rounded-full"></div>
-            <div className="w-12 h-1 bg-primary-400 rounded-full"></div>
-            <div className="w-16 h-1 bg-primary-500 rounded-full"></div>
-          </div>
         </div>
 
         {/* Legal Cards */}
