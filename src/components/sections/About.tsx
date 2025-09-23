@@ -63,17 +63,18 @@ const About: React.FC = () => {
     <section id="about" className="relative py-20" style={{ backgroundColor: '#f4f1ed' }}>
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Image */}
             <div
               ref={imageRef}
               className={`relative transition-all duration-700 ease-in-out ${imageVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                }`}
+                }`} 
             >
               <img
                 src={aboutImage}
                 alt="La Tiên Villa - Phối cảnh tổng thể"
                 className="w-full h-[500px] object-cover rounded-lg shadow-lg"
+                style={{height: 625}}
               />
               <div className="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-xl border">
                 <div className="flex items-center space-x-3">
@@ -93,7 +94,7 @@ const About: React.FC = () => {
                 }`}
             >
               <div>
-                <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight" style={{ color: '#623e2a' }}>
+                <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mt-0 mb-6 leading-tight" style={{ color: '#623e2a' }}>
                   Ngôi nhà biết thở
                 </h2>
                 <p className="font-sans text-lg leading-relaxed mb-6" style={{ color: '#623e2a' }}>
