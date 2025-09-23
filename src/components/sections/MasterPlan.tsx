@@ -81,8 +81,8 @@ const MasterPlan: React.FC = () => {
               <img
                 src={matBang}
                 alt="Mặt bằng tổng thể La Tiên Villa"
-                className="rounded-lg shadow-lg"
-                style={{ width: 1260, height: 700, objectFit: 'cover' }}
+                className="rounded-lg shadow-lg max-w-full"
+                style={{ width: 1260,  height: 800}}
               />
             </div>
           </div>
