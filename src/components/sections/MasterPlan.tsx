@@ -67,19 +67,22 @@ const MasterPlan: React.FC = () => {
             </motion.div>
 
 
-            <div className="space-y-4 text-lg md:text-xl font-light leading-relaxed opacity-90">
-              <p>Thiết kế "Lost in Nature",
-                Nằm lặng cây xanh ôm trọn hiên nhà,
-                Gần 14.000m² mặt nước len lỏi khắp không gian,
-                Ba bãi tắm riêng tư, trải rộng giữa vịnh trời.</p>
+            <div className="space-y-4 text-lg md:text-xl font-light leading-relaxed opacity-90 text-center">
+              <p>
+                Thiết kế "Lost in Nature", Nằm lặng cây xanh ôm trọn hiên nhà.
+              </p>
+              <p>
+                Gần 14.000m² mặt nước len lỏi khắp không gian, Ba bãi tắm riêng tư, trải rộng giữa vịnh trời.
+              </p>
             </div>
 
             {/* Overall Master Plan Image */}
-            <div className="pt-6">
+            <div className="pt-6 flex justify-center">
               <img
                 src={matBang}
                 alt="Mặt bằng tổng thể La Tiên Villa"
-                className="w-full rounded-lg shadow-lg"
+                className="rounded-lg shadow-lg"
+                style={{ width: 1100, height: 700, objectFit: 'cover' }}
               />
             </div>
           </div>

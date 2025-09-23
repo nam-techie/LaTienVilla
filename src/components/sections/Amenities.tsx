@@ -135,7 +135,7 @@ const Amenities: React.FC = () => {
                 {/* Introduction */}
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#623e2a] mb-6">
-                        Tiện ích Biệt thự Libera Nha Trang
+                        Tiện ích biệt thự Libera Nha Trang
                     </h2>
                     <p className="text-lg text-[#623e2a]/70 max-w-3xl mx-auto mb-8">
                         Sở hữu vị trí đắc địa bên bờ biển cùng vẻ đẹp thiên nhiên tuyệt mỹ, Libera Nha Trang không chỉ mang đến một
