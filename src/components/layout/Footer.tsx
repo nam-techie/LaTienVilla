@@ -2,6 +2,7 @@ import React from 'react';
 import { Facebook, Youtube, CheckCircle, MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { useScrollToSection } from '../../hooks/useScrollEffect';
 import TikTokIcon from '../icons/TikTokIcon';
+import logoBird from '../../assets/icons/iconPage-removebg-preview.png';
 
 const Footer: React.FC = () => {
   const scrollToSection = useScrollToSection();
@@ -77,30 +78,35 @@ const Footer: React.FC = () => {
       </div>
 
       <div className="relative z-10">
+        {/* Logo, tên, slogan, mô tả ở trên đầu, căn giữa */}
+        <div className="w-full flex flex-col items-center mb-5">
+          <img
+            src={logoBird}
+            alt="La Tiên Villa Logo"
+            className="h-36 w-auto"
+            style={{ maxWidth: 240 }}
+          />
+          <h3 className="font-serif text-3xl sm:text-4xl font-bold text-white mt-1">
+            La Tiên Villa
+          </h3>
+          <p className="font-sans text-base text-white/80 italic mt-0.5">
+            Đất tiên vịnh ngọc
+          </p>
+          <p className="font-sans text-base text-white/70 mt-1 text-center max-w-xl" style={{ marginTop: 13 }}>
+            Khu nghỉ dưỡng cao cấp với thiết kế sang trọng, mang đến trải nghiệm sống đẳng cấp giữa lòng thiên nhiên.
+          </p>
+        </div>
+
         {/* Main Footer Content */}
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-[30px] pb-12 sm:pb-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
 
             {/* Company Info */}
             <div className="lg:col-span-1">
               <div className="space-y-4">
-                <div>
-                  <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white mb-2">
-                    La Tiên Villa
-                  </h3>
-                  <p className="font-sans text-sm sm:text-base text-white/80 italic">
-                    Đất tiên vịnh ngọc
-                  </p>
-                </div>
-
-                <p className="font-sans text-sm text-white/70 leading-relaxed">
-                  Khu nghỉ dưỡng cao cấp với thiết kế sang trọng,
-                  mang đến trải nghiệm sống đẳng cấp giữa lòng thiên nhiên.
-                </p>
-
                 {/* Social Media */}
                 <div>
-                  <h4 className="font-sans text-base font-semibold text-white mb-4">
+                  <h4 className="font-sans text-lg font-semibold text-white mb-6">
                     Kết nối với chúng tôi
                   </h4>
                   <div className="flex space-x-3">
@@ -228,5 +234,7 @@ const Footer: React.FC = () => {
     </footer>
   );
 };
+
+
 
 export default Footer;
