@@ -82,7 +82,7 @@ const MasterPlan: React.FC = () => {
                 src={matBang}
                 alt="Mặt bằng tổng thể La Tiên Villa"
                 className="rounded-lg shadow-lg"
-                style={{ width: 1100, height: 700, objectFit: 'cover' }}
+                style={{ width: 1260, height: 700, objectFit: 'cover' }}
               />
             </div>
           </div>
