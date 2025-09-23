@@ -60,14 +60,28 @@ const Hero: React.FC<HeroProps> = ({ onVideoModalOpen }) => {
         <div className="flex justify-center">
           <button
             onClick={() => scrollToSection('about')}
-            className="group flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-8 py-4 hover:bg-white/20 transition-all duration-300"
+            className="group flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-8 py-4 transition-all duration-300 hover:bg-white"
           >
-            <ArrowDown className="w-6 h-6" />
-            <span className="font-sans text-sm font-bold tracking-[0.15em] uppercase text-primary-800">
+            {/* <ArrowDown className="w-6 h-6" /> */}
+            <span
+              className="font-sans text-sm font-bold tracking-[0.15em] uppercase"
+              style={{
+                color: '#fff',
+                transition: 'color 0.3s'
+              }}
+            >
               Tìm hiểu thêm
             </span>
           </button>
         </div>
+        <style>{`
+          .group:hover {
+            background-color: #fff !important;
+          }
+          .group:hover span {
+            color: #623e2a !important;
+          }
+        `}</style>
       </div>
 
       {/* Scroll Indicator */}
