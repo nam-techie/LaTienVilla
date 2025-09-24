@@ -36,12 +36,12 @@ const Header: React.FC = () => {
         <div className="container mx-auto px-4 sm:px-6 py-3">
           <div className="flex items-center justify-between">
             {/* Elegant Logo */}
-            <div className="flex items-center space-x-3 group">
+            <div className="flex items-center space-x-3">
               <div className="relative">
                 <img
                   src={iconImage}
                   alt="La Tiên Villa Icon"
-                  className="w-8 h-8 sm:w-10 sm:h-10 object-contain transition-all duration-300"
+                  className="w-10 h-10 sm:w-10 sm:h-10 object-contain transition-all duration-300"
                 />
               </div>
               <div>
@@ -49,7 +49,7 @@ const Header: React.FC = () => {
                   }`}>
                   La Tiên Villa
                 </span>
-                <div className={`font-sans text-xs font-medium tracking-wide transition-all duration-700 ${isScrolled ? 'text-primary-600' : 'text-white/90 drop-shadow-md'
+                <div className={`font-sans text-sm font-medium tracking-wide transition-all duration-700 ${isScrolled ? 'text-primary-600' : 'text-white/90 drop-shadow-md'
                   }`}>Đất tiên vịnh ngọc</div>
               </div>
             </div>
