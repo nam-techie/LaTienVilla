@@ -36,7 +36,13 @@ const Header: React.FC = () => {
         <div className="container mx-auto px-4 sm:px-6 py-3">
           <div className="flex items-center justify-between">
             {/* Elegant Logo */}
-            <div className="flex items-center space-x-3">
+            <div
+              className="flex items-center space-x-3 cursor-pointer"
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                // Nếu muốn reload trang: window.location.reload();
+              }}
+            >
               <div className="relative">
                 <img
                   src={iconImage}
