@@ -59,13 +59,13 @@ const Footer: React.FC = () => {
     {
       icon: Mail,
       label: 'Email',
-      details: ['info@latienvilla.vn']
+      details: ['hello@annhome.vn']
     },
-    {
-      icon: Clock,
-      label: 'Giờ làm việc',
-      details: ['T2 - T7: 8:00 - 18:00', 'CN: 9:00 - 17:00']
-    }
+    // {
+    //   icon: Clock,
+    //   label: 'Giờ làm việc',
+    //   details: ['T2 - T7: 8:00 - 18:00', 'CN: 9:00 - 17:00']
+    // }
   ];
 
   return (
@@ -167,7 +167,10 @@ const Footer: React.FC = () => {
                           {info.label}:
                         </p>
                         {info.details.map((detail, idx) => (
-                          <p key={idx} className="font-sans text-sm text-white/70">
+                          <p
+                            key={idx}
+                            className={`font-sans text-sm${info.label === 'Hotline' ? ' font-bold text-white' : ' text-white/70'}`}
+                          >
                             {detail}
                           </p>
                         ))}
